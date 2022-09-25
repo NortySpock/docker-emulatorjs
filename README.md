@@ -130,6 +130,7 @@ services:
       - TZ=Europe/London
       - SUBFOLDER=/ #optional
     volumes:
+      - /path/to/folder/:/data/nes/roms #optional
       - /path/to/config:/config
       - /path/to/data:/data
     ports:
@@ -151,6 +152,7 @@ docker run -d \
   -p 3000:3000 \
   -p 80:80 \
   -p 4001:4001 `#optional` \
+  -v /path/to/folder/:/data/nes/roms `#optional` \
   -v /path/to/config:/config \
   -v /path/to/data:/data \
   --restart unless-stopped \
